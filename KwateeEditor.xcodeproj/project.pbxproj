@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		ADADE7411C248B690044F337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADADE7401C248B690044F337 /* AppDelegate.swift */; };
-		ADADE7431C248B690044F337 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADADE7421C248B690044F337 /* ViewController.swift */; };
 		ADADE7451C248B690044F337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADADE7441C248B690044F337 /* Assets.xcassets */; };
 		ADADE7481C248B690044F337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADADE7461C248B690044F337 /* Main.storyboard */; };
 		ADADE7531C248B690044F337 /* KwateeEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADADE7521C248B690044F337 /* KwateeEditorTests.swift */; };
 		ADADE75E1C248B690044F337 /* KwateeEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADADE75D1C248B690044F337 /* KwateeEditorUITests.swift */; };
+		ADADE78A1C24B3AD0044F337 /* VLKwateeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADADE7891C24B3AD0044F337 /* VLKwateeMainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,6 @@
 /* Begin PBXFileReference section */
 		ADADE73D1C248B690044F337 /* KwateeEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KwateeEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADADE7401C248B690044F337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ADADE7421C248B690044F337 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ADADE7441C248B690044F337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADADE7471C248B690044F337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADADE7491C248B690044F337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		ADADE7591C248B690044F337 /* KwateeEditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KwateeEditorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADADE75D1C248B690044F337 /* KwateeEditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KwateeEditorUITests.swift; sourceTree = "<group>"; };
 		ADADE75F1C248B690044F337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADADE7891C24B3AD0044F337 /* VLKwateeMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLKwateeMainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +95,9 @@
 		ADADE73F1C248B690044F337 /* KwateeEditor */ = {
 			isa = PBXGroup;
 			children = (
+				ADADE7881C24B3870044F337 /* viewcontrollers */,
+				ADADE76B1C248BD30044F337 /* images */,
 				ADADE7401C248B690044F337 /* AppDelegate.swift */,
-				ADADE7421C248B690044F337 /* ViewController.swift */,
 				ADADE7441C248B690044F337 /* Assets.xcassets */,
 				ADADE7461C248B690044F337 /* Main.storyboard */,
 				ADADE7491C248B690044F337 /* Info.plist */,
@@ -120,6 +121,21 @@
 				ADADE75F1C248B690044F337 /* Info.plist */,
 			);
 			path = KwateeEditorUITests;
+			sourceTree = "<group>";
+		};
+		ADADE76B1C248BD30044F337 /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		ADADE7881C24B3870044F337 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				ADADE7891C24B3AD0044F337 /* VLKwateeMainViewController.swift */,
+			);
+			name = viewcontrollers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +206,7 @@
 				TargetAttributes = {
 					ADADE73C1C248B690044F337 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9H8NJ2NLT7;
 					};
 					ADADE74D1C248B690044F337 = {
 						CreatedOnToolsVersion = 7.2;
@@ -252,8 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADADE7431C248B690044F337 /* ViewController.swift in Sources */,
 				ADADE7411C248B690044F337 /* AppDelegate.swift in Sources */,
+				ADADE78A1C24B3AD0044F337 /* VLKwateeMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = KwateeEditor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -396,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = KwateeEditor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -475,6 +494,7 @@
 				ADADE7641C248B690044F337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADADE7651C248B690044F337 /* Build configuration list for PBXNativeTarget "KwateeEditorTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +503,7 @@
 				ADADE7671C248B690044F337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADADE7681C248B690044F337 /* Build configuration list for PBXNativeTarget "KwateeEditorUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +512,7 @@
 				ADADE76A1C248B690044F337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
