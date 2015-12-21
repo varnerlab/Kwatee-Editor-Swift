@@ -20,6 +20,10 @@ class VLKwateeMainViewController: NSViewController {
     // Upload and export URLs
     private var myUploadURL:NSURL?
     private var myExportURL:NSURL?
+    private var myPreferencesWindowViewController:VLKwateeEditorPreferencesWindowController?
+    
+    // load the managers -
+    private let myConfigurationManager:VLKwateeConfigurationManager = VLKwateeConfigurationManager.sharedInstance
     
     
     override func viewDidLoad() {
@@ -35,6 +39,24 @@ class VLKwateeMainViewController: NSViewController {
     // MARK:- Action methods -
     @IBAction func myPreferenceButtonAction(sender:NSButton) -> Void {
     
+        // grab the preferences window controller -
+        self.myPreferencesWindowViewController = VLKwateeEditorPreferencesWindowController(windowNibName:"VLKwateeEditorPreferencesWindowController");
+        
+        // launch the sheet -
+        if let local_window = self.view.window {
+            
+            // completion handler -
+            let myCompletionHandler = {[weak self](user_selection:NSModalResponse) -> Void in
+            
+                
+                // kia my controller -
+                self?.myPreferencesWindowViewController = nil
+            }
+            
+            
+            // launch -
+            local_window.beginSheet((self.myPreferencesWindowViewController?.window)!, completionHandler:myCompletionHandler)
+        }
     }
     
     @IBAction func myUploadButtonAction(sender:NSButton) -> Void {
@@ -98,6 +120,8 @@ class VLKwateeMainViewController: NSViewController {
     
     @IBAction func myExecuteButtonAction(sender:NSButton) -> Void {
         
+       
+        
     }
     
     
@@ -149,6 +173,9 @@ class VLKwateeMainViewController: NSViewController {
                 
                 // set the image on the button -
                 self.myExecuteButton?.image = enabled_image
+                
+                // enable -
+                self.myExecuteButton?.enabled = true
             }
         }
     }

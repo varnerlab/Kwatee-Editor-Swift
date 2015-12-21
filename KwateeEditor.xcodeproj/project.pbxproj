@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD9152121C28859900543724 /* VLKwateeEditorPreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9152101C28859900543724 /* VLKwateeEditorPreferencesWindowController.swift */; };
+		AD9152131C28859900543724 /* VLKwateeEditorPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD9152111C28859900543724 /* VLKwateeEditorPreferencesWindowController.xib */; };
+		AD9152161C28AB4300543724 /* Configuration.xml in Resources */ = {isa = PBXBuildFile; fileRef = AD9152151C28AB4300543724 /* Configuration.xml */; };
+		AD9152191C28ABF800543724 /* VLKwateeConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9152181C28ABF800543724 /* VLKwateeConfigurationManager.swift */; };
 		ADADE7411C248B690044F337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADADE7401C248B690044F337 /* AppDelegate.swift */; };
 		ADADE7451C248B690044F337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADADE7441C248B690044F337 /* Assets.xcassets */; };
 		ADADE7481C248B690044F337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADADE7461C248B690044F337 /* Main.storyboard */; };
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD9152101C28859900543724 /* VLKwateeEditorPreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLKwateeEditorPreferencesWindowController.swift; sourceTree = "<group>"; };
+		AD9152111C28859900543724 /* VLKwateeEditorPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VLKwateeEditorPreferencesWindowController.xib; sourceTree = "<group>"; };
+		AD9152151C28AB4300543724 /* Configuration.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Configuration.xml; sourceTree = "<group>"; };
+		AD9152181C28ABF800543724 /* VLKwateeConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLKwateeConfigurationManager.swift; sourceTree = "<group>"; };
 		ADADE73D1C248B690044F337 /* KwateeEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KwateeEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADADE7401C248B690044F337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADADE7441C248B690044F337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD9152141C28AB1700543724 /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				AD9152151C28AB4300543724 /* Configuration.xml */,
+			);
+			name = configuration;
+			sourceTree = "<group>";
+		};
+		AD9152171C28ABB300543724 /* foundation */ = {
+			isa = PBXGroup;
+			children = (
+				AD9152181C28ABF800543724 /* VLKwateeConfigurationManager.swift */,
+			);
+			name = foundation;
+			sourceTree = "<group>";
+		};
 		ADADE7341C248B690044F337 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +119,8 @@
 		ADADE73F1C248B690044F337 /* KwateeEditor */ = {
 			isa = PBXGroup;
 			children = (
+				AD9152171C28ABB300543724 /* foundation */,
+				AD9152141C28AB1700543724 /* configuration */,
 				ADADE7881C24B3870044F337 /* viewcontrollers */,
 				ADADE76B1C248BD30044F337 /* images */,
 				ADADE7401C248B690044F337 /* AppDelegate.swift */,
@@ -134,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				ADADE7891C24B3AD0044F337 /* VLKwateeMainViewController.swift */,
+				AD9152101C28859900543724 /* VLKwateeEditorPreferencesWindowController.swift */,
+				AD9152111C28859900543724 /* VLKwateeEditorPreferencesWindowController.xib */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -243,6 +271,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD9152161C28AB4300543724 /* Configuration.xml in Resources */,
+				AD9152131C28859900543724 /* VLKwateeEditorPreferencesWindowController.xib in Resources */,
 				ADADE7451C248B690044F337 /* Assets.xcassets in Resources */,
 				ADADE7481C248B690044F337 /* Main.storyboard in Resources */,
 			);
@@ -270,7 +300,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADADE7411C248B690044F337 /* AppDelegate.swift in Sources */,
+				AD9152121C28859900543724 /* VLKwateeEditorPreferencesWindowController.swift in Sources */,
 				ADADE78A1C24B3AD0044F337 /* VLKwateeMainViewController.swift in Sources */,
+				AD9152191C28ABF800543724 /* VLKwateeConfigurationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,12 +433,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = KwateeEditor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.varnerlab.KwateeEditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -414,12 +448,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = KwateeEditor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.varnerlab.KwateeEditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
