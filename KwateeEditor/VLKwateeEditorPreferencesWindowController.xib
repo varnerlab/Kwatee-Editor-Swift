@@ -11,7 +11,9 @@
                 <outlet property="myDoneButton" destination="BN9-SZ-Fe6" id="ySf-xC-Tuj"/>
                 <outlet property="myModelTypePopupButton" destination="hu6-zA-Ofb" id="2un-gR-Pj8"/>
                 <outlet property="myOpenServerPathButton" destination="zCV-cK-l0H" id="mV7-TW-JxQ"/>
+                <outlet property="myServerConnectionTestLabel" destination="SgY-TT-8iT" id="OS4-tc-WAa"/>
                 <outlet property="myServerPathLabel" destination="icD-Er-sC1" id="Tf0-NK-crr"/>
+                <outlet property="myTestServerConnectionButton" destination="O3t-Ju-72K" id="lvN-iN-62W"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -86,18 +88,37 @@ Gw
                     </button>
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hu6-zA-Ofb">
                         <rect key="frame" x="94" y="146" width="480" height="26"/>
-                        <popUpButtonCell key="cell" type="push" title="Select model type ..." bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="KMg-Da-sAi" id="lDb-nn-MA3">
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lDb-nn-MA3">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" id="YHW-Yc-AWs">
                                 <items>
-                                    <menuItem title="Select model type ..." state="on" id="KMg-Da-sAi"/>
-                                    <menuItem title="Item 2" id="NUb-Xt-r79"/>
-                                    <menuItem title="Item 3" id="CdE-Vy-yh4"/>
+                                    <menuItem title="Select model type ..." id="KMg-Da-sAi"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
                     </popUpButton>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O3t-Ju-72K">
+                        <rect key="frame" x="96" y="91" width="144" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="144" id="xuh-h0-iEj"/>
+                        </constraints>
+                        <buttonCell key="cell" type="roundRect" title="Test server connection" bezelStyle="roundedRect" alignment="center" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XGt-NP-0vU">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="cellTitle"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="myTestServerConnectionAction:" target="-2" id="agF-5a-IrY"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SgY-TT-8iT">
+                        <rect key="frame" x="246" y="93" width="282" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Connection status: N/A" id="zhS-9N-FbG">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
                 <constraints>
                     <constraint firstItem="hu6-zA-Ofb" firstAttribute="baseline" secondItem="ceg-fh-Huh" secondAttribute="baseline" id="2aO-7a-GDf"/>
@@ -106,16 +127,21 @@ Gw
                     <constraint firstItem="icD-Er-sC1" firstAttribute="top" secondItem="zCV-cK-l0H" secondAttribute="top" id="7tW-Fj-7e7"/>
                     <constraint firstItem="hu6-zA-Ofb" firstAttribute="leading" secondItem="ceg-fh-Huh" secondAttribute="trailing" constant="8" symbolic="YES" id="CSa-LS-mcO"/>
                     <constraint firstItem="zCV-cK-l0H" firstAttribute="leading" secondItem="icD-Er-sC1" secondAttribute="trailing" constant="5" id="CmP-3b-ScD"/>
+                    <constraint firstItem="O3t-Ju-72K" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="96" id="E3i-uY-xwI"/>
                     <constraint firstItem="mcR-cK-GS8" firstAttribute="baseline" secondItem="BN9-SZ-Fe6" secondAttribute="baseline" id="L6F-KQ-4oz"/>
                     <constraint firstAttribute="bottom" secondItem="BN9-SZ-Fe6" secondAttribute="bottom" constant="23" id="PBE-xR-Nzc"/>
                     <constraint firstAttribute="trailing" secondItem="hu6-zA-Ofb" secondAttribute="trailing" constant="21" id="RX6-O0-uEB"/>
                     <constraint firstItem="hu6-zA-Ofb" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="30" id="Xgo-n9-BP5"/>
+                    <constraint firstItem="O3t-Ju-72K" firstAttribute="top" secondItem="icD-Er-sC1" secondAttribute="bottom" constant="8" id="YiN-yx-DPh"/>
+                    <constraint firstItem="SgY-TT-8iT" firstAttribute="leading" secondItem="O3t-Ju-72K" secondAttribute="trailing" constant="8" id="bmI-TW-uIQ"/>
                     <constraint firstItem="icD-Er-sC1" firstAttribute="top" secondItem="hu6-zA-Ofb" secondAttribute="bottom" constant="9" id="guC-Pr-hDx"/>
                     <constraint firstAttribute="bottom" secondItem="mcR-cK-GS8" secondAttribute="bottom" constant="23" id="gyX-j4-AmW"/>
                     <constraint firstItem="icD-Er-sC1" firstAttribute="leading" secondItem="hu6-zA-Ofb" secondAttribute="leading" id="iFe-z9-Hrk"/>
+                    <constraint firstItem="SgY-TT-8iT" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="90" id="inm-BA-bHa"/>
                     <constraint firstItem="BN9-SZ-Fe6" firstAttribute="leading" secondItem="mcR-cK-GS8" secondAttribute="trailing" constant="6" id="kdN-YG-pvL"/>
                     <constraint firstItem="icD-Er-sC1" firstAttribute="baseline" secondItem="ar7-x0-WFS" secondAttribute="baseline" id="tr4-kz-V2W"/>
                     <constraint firstItem="zCV-cK-l0H" firstAttribute="trailing" secondItem="hu6-zA-Ofb" secondAttribute="trailing" id="ueX-UA-37k"/>
+                    <constraint firstAttribute="trailing" secondItem="SgY-TT-8iT" secondAttribute="trailing" constant="66" id="wM4-V9-3tQ"/>
                     <constraint firstAttribute="trailing" secondItem="BN9-SZ-Fe6" secondAttribute="trailing" constant="20" symbolic="YES" id="ztU-Zl-JT4"/>
                 </constraints>
             </view>

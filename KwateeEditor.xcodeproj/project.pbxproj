@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD3A11C91C29C46300D3E4FB /* VLKwateeExecutionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A11C81C29C46300D3E4FB /* VLKwateeExecutionManager.swift */; };
+		AD3A11CB1C29F69800D3E4FB /* VLKwateeEditorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A11CA1C29F69800D3E4FB /* VLKwateeEditorState.swift */; };
 		AD9152121C28859900543724 /* VLKwateeEditorPreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9152101C28859900543724 /* VLKwateeEditorPreferencesWindowController.swift */; };
 		AD9152131C28859900543724 /* VLKwateeEditorPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD9152111C28859900543724 /* VLKwateeEditorPreferencesWindowController.xib */; };
 		AD9152161C28AB4300543724 /* Configuration.xml in Resources */ = {isa = PBXBuildFile; fileRef = AD9152151C28AB4300543724 /* Configuration.xml */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD3A11C81C29C46300D3E4FB /* VLKwateeExecutionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLKwateeExecutionManager.swift; sourceTree = "<group>"; };
+		AD3A11CA1C29F69800D3E4FB /* VLKwateeEditorState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLKwateeEditorState.swift; sourceTree = "<group>"; };
 		AD9152101C28859900543724 /* VLKwateeEditorPreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLKwateeEditorPreferencesWindowController.swift; sourceTree = "<group>"; };
 		AD9152111C28859900543724 /* VLKwateeEditorPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VLKwateeEditorPreferencesWindowController.xib; sourceTree = "<group>"; };
 		AD9152151C28AB4300543724 /* Configuration.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Configuration.xml; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				AD9152181C28ABF800543724 /* VLKwateeConfigurationManager.swift */,
+				AD3A11C81C29C46300D3E4FB /* VLKwateeExecutionManager.swift */,
 			);
 			name = foundation;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				ADADE7891C24B3AD0044F337 /* VLKwateeMainViewController.swift */,
 				AD9152101C28859900543724 /* VLKwateeEditorPreferencesWindowController.swift */,
 				AD9152111C28859900543724 /* VLKwateeEditorPreferencesWindowController.xib */,
+				AD3A11CA1C29F69800D3E4FB /* VLKwateeEditorState.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -301,6 +307,8 @@
 			files = (
 				ADADE7411C248B690044F337 /* AppDelegate.swift in Sources */,
 				AD9152121C28859900543724 /* VLKwateeEditorPreferencesWindowController.swift in Sources */,
+				AD3A11C91C29C46300D3E4FB /* VLKwateeExecutionManager.swift in Sources */,
+				AD3A11CB1C29F69800D3E4FB /* VLKwateeEditorState.swift in Sources */,
 				ADADE78A1C24B3AD0044F337 /* VLKwateeMainViewController.swift in Sources */,
 				AD9152191C28ABF800543724 /* VLKwateeConfigurationManager.swift in Sources */,
 			);

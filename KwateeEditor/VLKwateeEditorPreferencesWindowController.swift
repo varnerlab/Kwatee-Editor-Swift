@@ -16,6 +16,8 @@ class VLKwateeEditorPreferencesWindowController: NSWindowController {
     @IBOutlet var myOpenServerPathButton:NSButton?
     @IBOutlet var myServerPathLabel:NSTextField?
     @IBOutlet var myModelTypePopupButton:NSPopUpButton?
+    @IBOutlet var myTestServerConnectionButton:NSButton?
+    @IBOutlet var myServerConnectionTestLabel:NSTextField?
     
     // data -
     private var myServerPathURL:NSURL?
@@ -57,6 +59,10 @@ class VLKwateeEditorPreferencesWindowController: NSWindowController {
         self.window?.sheetParent?.endSheet(self.window!, returnCode:NSModalResponseOK)
     }
     
+    @IBAction func myTestServerConnectionAction(sender:NSButton) -> Void {
+    
+    }
+    
     @IBAction func myServerPathButtonAction(sender:NSButton) -> Void {
     
         // ok, so let's launch the open panel -
@@ -81,6 +87,9 @@ class VLKwateeEditorPreferencesWindowController: NSWindowController {
                     
                     // display -
                     self?.myServerPathLabel?.stringValue = local_path_url.absoluteString
+                    
+                    // update the test button -
+                    self?.myTestServerConnectionButton?.enabled = true
                 }
             }
         }
