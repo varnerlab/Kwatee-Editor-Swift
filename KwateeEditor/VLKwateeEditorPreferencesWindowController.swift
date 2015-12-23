@@ -21,7 +21,10 @@ class VLKwateeEditorPreferencesWindowController: NSWindowController {
     
     // data -
     private var myServerPathURL:NSURL?
+    private var myEditorState:VLKwateeEditorState = VLKwateeEditorState()
     
+    // managers -
+    private var myPersistanceManager:VLKwateeUserPreferencesPersistanceManager = VLKwateeUserPreferencesPersistanceManager.sharedInstance
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -40,6 +43,20 @@ class VLKwateeEditorPreferencesWindowController: NSWindowController {
                 }
             }
         }
+        
+        // ok, do we have any saved preferences?
+        let memento_object:VLKwateeMemento = myPersistanceManager.restorePreviousEditorState()
+        myEditorState.restoreFromMemento(memento_object)
+        
+        // what is the server path?
+        if let server_path = myEditorState.server_path {
+            
+            // set the server path string -
+            myServerPathLabel?.stringValue = server_path
+            
+            // enable test -
+            myTestServerConnectionButton?.enabled = true
+        }
     }
     
     
@@ -47,7 +64,14 @@ class VLKwateeEditorPreferencesWindowController: NSWindowController {
     @IBAction func myDoneButtonAction(sender:NSButton) -> Void {
         
         // save user changes, then close ...
+        if let value = myServerPathLabel?.stringValue {
+            
+            // set the value on the state -
+            myEditorState.server_path = value
+        }
         
+        // Dump state to persistance manager -
+        myPersistanceManager.saveEditorState(myEditorState.toMemento())
         
         // close -
         self.window?.sheetParent?.endSheet(self.window!, returnCode:NSModalResponseOK)

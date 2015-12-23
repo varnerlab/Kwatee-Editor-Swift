@@ -19,6 +19,7 @@
 		ADADE7531C248B690044F337 /* KwateeEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADADE7521C248B690044F337 /* KwateeEditorTests.swift */; };
 		ADADE75E1C248B690044F337 /* KwateeEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADADE75D1C248B690044F337 /* KwateeEditorUITests.swift */; };
 		ADADE78A1C24B3AD0044F337 /* VLKwateeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADADE7891C24B3AD0044F337 /* VLKwateeMainViewController.swift */; };
+		ADBBD4B81C2AF1380066EDC1 /* VLKwateeUserPreferencesPersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBBD4B71C2AF1380066EDC1 /* VLKwateeUserPreferencesPersistanceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		ADADE75D1C248B690044F337 /* KwateeEditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KwateeEditorUITests.swift; sourceTree = "<group>"; };
 		ADADE75F1C248B690044F337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADADE7891C24B3AD0044F337 /* VLKwateeMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLKwateeMainViewController.swift; sourceTree = "<group>"; };
+		ADBBD4B71C2AF1380066EDC1 /* VLKwateeUserPreferencesPersistanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLKwateeUserPreferencesPersistanceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				AD9152181C28ABF800543724 /* VLKwateeConfigurationManager.swift */,
 				AD3A11C81C29C46300D3E4FB /* VLKwateeExecutionManager.swift */,
+				ADBBD4B71C2AF1380066EDC1 /* VLKwateeUserPreferencesPersistanceManager.swift */,
 			);
 			name = foundation;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				AD3A11CB1C29F69800D3E4FB /* VLKwateeEditorState.swift in Sources */,
 				ADADE78A1C24B3AD0044F337 /* VLKwateeMainViewController.swift in Sources */,
 				AD9152191C28ABF800543724 /* VLKwateeConfigurationManager.swift in Sources */,
+				ADBBD4B81C2AF1380066EDC1 /* VLKwateeUserPreferencesPersistanceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
