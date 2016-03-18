@@ -93,10 +93,14 @@ class VLKwateeEditorPreferencesWindowController: NSWindowController {
             // we need to search for this jar at our server location in the dist directory -
             if let value = myServerPathLabel?.stringValue {
             
-                let full_server_path = value+"dist/"+server_jar_name;
+                let local_url = NSURL(string: value)
+                let full_server_path = local_url!.path!+"/dist/"+server_jar_name;
                 if fileManager.fileExistsAtPath(full_server_path) {
+                    
                     print("File exists")
+                
                 } else {
+                    
                     print("File not found = "+full_server_path)
                 }
             }
