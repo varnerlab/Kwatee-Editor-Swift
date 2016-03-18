@@ -85,6 +85,22 @@ class VLKwateeEditorPreferencesWindowController: NSWindowController {
     
     @IBAction func myTestServerConnectionAction(sender:NSButton) -> Void {
     
+        let fileManager = NSFileManager.defaultManager()
+        
+        // ok, we have the jar name -
+        if let server_jar_name:String = VLKwateeConfigurationManager.sharedInstance.lookupServerJarFromConfigurationTree() {
+            
+            // we need to search for this jar at our server location in the dist directory -
+            if let value = myServerPathLabel?.stringValue {
+            
+                let full_server_path = value+"dist/"+server_jar_name;
+                if fileManager.fileExistsAtPath(full_server_path) {
+                    print("File exists")
+                } else {
+                    print("File not found = "+full_server_path)
+                }
+            }
+        }
     }
     
     @IBAction func myServerPathButtonAction(sender:NSButton) -> Void {

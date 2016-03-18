@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
+    
+    <server jar="kwatee-1.0-SNAPSHOT.jar"/>
+    
     <listOfModelTypes>
         <model_type display_text="Linear dynamic regulatory flux balance analysis"  input_handler_class="org.varnerlab.kwatee.nfbamodel.VLCGNFBAParseVarnerNFBAFlatFile"  output_handler_class="org.varnerlab.kwatee.nfbamodel.VLCGNFBAWriteJuliaLFBAModel"/>
     </listOfModelTypes>

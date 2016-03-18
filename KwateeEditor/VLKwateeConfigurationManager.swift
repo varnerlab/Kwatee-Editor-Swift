@@ -48,6 +48,35 @@ class VLKwateeConfigurationManager {
     
     
     // MARK:- Lookup methods for configuration tree -
+    func lookupServerJarFromConfigurationTree() -> String? {
+        
+        // method variables -
+        var myServerJarName:String?
+        
+        // ok, we need to lookup the jarname from the configuration tree -
+        if let configuration_tree = self.myConfigurationTree {
+            
+            do {
+                
+                if let xml_node_array:[NSXMLNode] = try configuration_tree.nodesForXPath(".//server/@jar") {
+                
+                    // we should have only *one* entry -
+                    if (xml_node_array.count == 1) {
+                        
+                        // get the value -
+                        myServerJarName = xml_node_array[0].stringValue
+                    }
+                }
+            }
+            catch {
+                // post message -
+                print("ERROR: Failure to lookup server jarname")
+            }
+        }
+        
+        // return -
+        return myServerJarName
+    }
     
     // ------------------------------------------------------------------------------------------------------- //
     // lookupMyModelTypesFromConfigurationTree: use xpath to lookup model types from the configuration tree

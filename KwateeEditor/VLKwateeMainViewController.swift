@@ -24,7 +24,7 @@ class VLKwateeMainViewController: NSViewController {
     
     // load the managers -
     private let myConfigurationManager:VLKwateeConfigurationManager = VLKwateeConfigurationManager.sharedInstance
-    
+    private let myExecutionManager:VLKwateeExecutionManager = VLKwateeExecutionManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,6 @@ class VLKwateeMainViewController: NSViewController {
     
     override func viewWillAppear() {
         super.viewWillAppear()
-        
         self.view.autoresizingMask = NSAutoresizingMaskOptions.ViewNotSizable
     }
     
@@ -52,7 +51,6 @@ class VLKwateeMainViewController: NSViewController {
                 // kia my controller -
                 self?.myPreferencesWindowViewController = nil
             }
-            
             
             // launch -
             local_window.beginSheet((self.myPreferencesWindowViewController?.window)!, completionHandler:myCompletionHandler)
@@ -120,7 +118,7 @@ class VLKwateeMainViewController: NSViewController {
     
     @IBAction func myExecuteButtonAction(sender:NSButton) -> Void {
         
-       
+        
         
     }
     
